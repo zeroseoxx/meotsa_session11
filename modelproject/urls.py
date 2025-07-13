@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from blog.views import *
+from django.views.generic import TemplateView #404에러 때문에 추가 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('accounts/',include('accounts.urls')),
     path('dj/',include('dj_rest_auth.urls')),
     path('dj/registration/',include('dj_rest_auth.registration.urls')),
+    path('', TemplateView.as_view(template_name='index.html')),  # 404 에러나서 추가 # 루트 경로 처리
 ]
