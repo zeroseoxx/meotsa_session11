@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #디버그 모드 - 개발을 위한 모드 , 서버에 올릴 것이니 False
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['http://127.0.0.1:8000/','43.201.166.117','meotsa.store']
 
